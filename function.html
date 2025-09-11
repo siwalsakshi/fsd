@@ -2,23 +2,31 @@
 <html lang="en">
 <head>
     <style>
-        #div1{
-            background-color:yellow;
+        #div{
+            background-color:white;
             width:300px;
             height:300px;   
         }
 
+
     </style>
 </head>
-<body>
-    <div id="div1">
-        <button onclick="ad()">click</button> 
-    <p ></p>
-    </div>
+<body id="div">
+        <button onclick="red()">RED</button>
+        <button onclick="green()">GREEN</button>
+        <button onclick="blue()">BLUE</button>
     <script>
-        function ad()
+        function red()
         {
-            document.getElementById("div1").innerHTML="<h1>hello</h1>";
+            document.getElementById("div").style.backgroundColor="red";
+        }
+        function green()
+        {
+            document.getElementById("div").style.backgroundColor="green";
+        }
+        function blue()
+        {
+            document.getElementById("div").style.backgroundColor="blue";
         }
 
         //function addition()
