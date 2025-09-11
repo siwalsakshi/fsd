@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #demo {
+            width: 400px;
+            height: 400px;
+            border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Logo + Heading container */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .header img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border: 2px solid #000;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #counter {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo">
+        <!-- Header row -->
+        <div class="header">
+            <img src="R.jpg" alt="logo">
+            <h1>COUNTER APP</h1>
+        </div>
+
+        <!-- Counter controls -->
+        <div>
+            <button onclick="decrement()">-</button>
+            <span id="counter">0</span>
+            <button onclick="increment()">+</button>
+        </div>
+    </div>
+
+    <script>
+        let count = 0;
+        function increment() {
+            if (count >= 10) {
+                alert("Maximum limit reached");
+                return;
+            }
+            count++;
+            document.getElementById('counter').innerText = count;
+        }
+
+        function decrement() {
+            if (count <= 0) {
+                alert("Minimum limit reached");
+                return;
+            }
+            count--;
+            document.getElementById('counter').innerText = count;
+        }
+    </script>
+</body>
+</html>
