@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hide Image Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+      width: 300px;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      transition: opacity 0.3s ease;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="R.jpg" alt="Logo" id="logoImg">
+    <br>
+    <button onclick="hideImage()">Hide Image</button>
+  </div>
+
+  <script>
+    function hideImage() {
+      document.getElementById("logoImg").style.display = "none";
+    }
+  </script>
+</body>
+</html>
