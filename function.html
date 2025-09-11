@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        #div1{
+            background-color:yellow;
+            width:300px;
+            height:300px;   
+        }
+
+    </style>
 </head>
 <body>
+    <div id="div1">
+        <button onclick="ad()">click</button> 
+    <p ></p>
+    </div>
     <script>
-        function addition()
+        function ad()
         {
-            var a=10;
-            var b=20;
-            var c=a+b;
-            document.write("The addition is: "+c);
+            document.getElementById("div1").innerHTML="<h1>hello</h1>";
         }
-        function subtraction()
-        {
-            var a=20;
-            var b=10;
-            var c=a-b;
-            document.write("<br>The subtraction is: "+c);
-        }
-        addition();
-        subtraction();
+
+        //function addition()
+        //{
+          //  var a=10;
+            //var b=20;
+            //var c=a+b;
+            //document.write("The addition is: "+c);
+        
+        //function subtraction()
+        //{
+          //  var a=20;
+            // var b=10;
+           // var c=a-b;
+            //document.write("<br>The subtraction is: "+c);
+        //}
+        //addition();
+       // //subtraction();
 
     </script>
 </body>
