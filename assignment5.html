@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <p id="demo">0</p>
+    <button onclick="displayAddition()">Addition</button>
+    <button onclick="displaySubtraction()">Subtraction</button>
+
+    <script>
+        let a = 0; 
+
+        function displayAddition() {
+            a += 1; 
+            document.getElementById("demo").innerHTML = a;
+        }
+
+        function displaySubtraction() {
+            a -= 1; 
+            document.getElementById("demo").innerHTML = a;
+        }
+    </script>
+</body>
+</html>
