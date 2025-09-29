@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    // advance version of promise . it is used to use multiple then and catch
+    <script>
+        async function asyncFunc(){
+            let promise = new Promise((resolve,reject) => {
+                setTimeout(() => resolve("Promise resolved"), 2000)
+            });
+            let result=await promise;
+            alert(result);
+        }
+        asyncFunc();
+    </script>
+</body>
+</html>
