@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+</head>
+<body>
+    <script>
+        const myPromise = new Promise((resolve, reject) => {
+            const password = "sakshi@123"; // Simulating success or failure
+            if (password.length > 8) {
+                resolve("Password length is ok");
+            } else {
+                reject("Password length is not ok");
+            }
+        });
+        //console.log(myPromise);
+        myPromise.then((message) => {
+            console.log("Success: " + message);
+        })
+        myPromise.catch((err) => {
+            console.log("Failure: " + err);
+        }).finally(() => {
+            console.log("Promise has been settled (either resolved or rejected)");
+        }); 
+          
+    </script>
+    
+</body>
+</html>
